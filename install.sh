@@ -28,6 +28,10 @@ kind --version
 kubectl version --client
 
 sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node -v
+npm -v
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu && newgrp docker
