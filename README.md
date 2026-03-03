@@ -4,3 +4,4 @@ kubectl get pods -n notes-app
 kubectl get endpoints -n notes-app
 kubectl describe svc notes-app-service -n notes-app
 kubectl get ingress -n student-app -o yaml
+kubectl rollout restart deployment student-app-deployment -n student-app
