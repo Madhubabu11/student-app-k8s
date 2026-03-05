@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: student-app
-          image: your-dockerhub-username/student-app:latest
+          image: vikashbabu/student-app:latest1
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
