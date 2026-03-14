@@ -5,18 +5,28 @@ metadata:
   namespace: student-app
 spec:
   replicas: 2
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
   selector:
     matchLabels:
       app: student-app
+
   template:
     metadata:
       labels:
         app: student-app
+
     spec:
       containers:
         - name: student-app
           image: vikashbabu/student-app:latest1
           imagePullPolicy: Always
+
           ports:
             - containerPort: 3000
 
